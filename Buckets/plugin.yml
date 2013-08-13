@@ -1,5 +1,5 @@
 name: Buckets
-main: io.github.NegroBob.Buckets
+main: io.github.NegroBob.Buckets.Buckets
 version: 1
 
 commands:

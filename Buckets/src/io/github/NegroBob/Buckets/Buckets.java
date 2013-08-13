@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -11,6 +12,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Buckets extends JavaPlugin {
 	
+	@EventHandler()
 	public void onPlayerJoin(PlayerJoinEvent evt) {
 		Player player = evt.getPlayer();
 		PlayerInventory inventory = player.getInventory();
@@ -22,6 +24,9 @@ public final class Buckets extends JavaPlugin {
 			inventory.addItem(fullbuckets);
 			player.sendMessage("I have filled your buckets with water!");
 			
+		}else{
+			
+			player.sendMessage("You have no buckets to fill!");
 		}
 		
 	}
