@@ -17,7 +17,7 @@ public class Buckets extends JavaPlugin implements Listener {
 	
 	@Override
 	public void onEnable(){
-		getServer().getPluginManager().registerEvents(new Buckets(), this);
+		getServer().getPluginManager().registerEvents(this, this);
 		
 		
 	}
@@ -30,7 +30,7 @@ public class Buckets extends JavaPlugin implements Listener {
 
 		@EventHandler
 		public void onPlayerLogin(PlayerLoginEvent event) {
-			Player player = evt.getPlayer();
+			Player player = event.getPlayer();
 			PlayerInventory inventory = player.getInventory();
 			ItemStack emptybuckets = new ItemStack(Material.BUCKET, 16);
 			ItemStack fullbuckets = new ItemStack(Material.WATER_BUCKET, 16);
