@@ -1,0 +1,10 @@
+name: Buckets
+main: io.github.NegroBob.Buckets
+version: 1
+
+commands:
+   basic:
+      description: This is the Description
+      usage: /Buckets
+      permission: Buckets.help
+      permission-message: You don't have permission.
