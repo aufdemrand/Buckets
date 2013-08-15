@@ -51,7 +51,7 @@ public class Buckets extends JavaPlugin implements Listener {
 		if (cmd.getName().equalsIgnoreCase("Buckets")) {
 			
 			if(!(sender instanceof Player)) {
-				sender.sendMessage("This command cnannot be run from the console");
+				sender.sendMessage("This command cannot be run from the console");
 				
 			} else {
 				Player player = (Player) sender;
